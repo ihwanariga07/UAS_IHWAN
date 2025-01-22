@@ -34,6 +34,17 @@
 </nav>
 
 
+<script>
+  function confirmLogout(event) {
+    // Show the confirmation dialog
+    var confirmation = confirm("Yakin anda ingin keluar?");
+    
+    // If the user clicks 'Cancel', prevent the logout by returning false
+    if (!confirmation) {
+      event.preventDefault();
+    }
+  }
+</script>
 <!-- CSS -->
 <style>
   
