@@ -1,46 +1,37 @@
-<?php include("../koneksi.php");
 
+
+
+
+
+
+
+
+<?php
+#1. koneksikan file ini
+include("../koneksi.php");
+
+#2. mengambil value dari form
 $tanggal_checkin = $_POST['tanggal_checkin'];
 $tanggal_checkout = $_POST['tanggal_checkout'];
 $id_tamu = $_POST['id_tamu'];
 
-// Proses unggah bukti pembayaran
-if (isset($_FILES['bukti_pembayaran']) && $_FILES['bukti_pembayaran']['name'] != "") {
-    $bukti_pembayaran = $_FILES['bukti_pembayaran']['name'];
-    $target = "../uploads/" . basename($bukti_pembayaran);
 
-    if (!move_uploaded_file($_FILES['bukti_pembayaran']['tmp_name'], $target)) {
-        die("Gagal mengunggah bukti pembayaran.");
-    }
-}
+$nama_foto = $_FILES['foto']['name'];
+$tmp_foto = $_FILES['foto']['tmp_name'];
 
-// Query simpan ke database
-$simpan = "INSERT INTO pemesanan (tanggal_checkin, tanggal_checkout, id_tamu, bukti_pembayaran) 
-           VALUES ('$tanggal_checkin', '$tanggal_checkout', '$id_tamu', '$nama_foto')";
+#3. menulis query
+$simpan = "INSERT INTO pemesanan (tanggal_checkin,tanggal_checkout,id_tamu,bukti_pembayaran) 
+VALUES ('$tanggal_checkin','$tanggal_checkout','$id_tamu','$nama_foto')";
 
-// Jalankan query
+#4. jalankan query
 $proses = mysqli_query($koneksi, $simpan);
 
+#4.1. Proses Upload File
 $upload_foto = move_uploaded_file($tmp_foto,"foto/$nama_foto");
 
-// Redirect ke index
-if ($proses) {
-    echo "<script>alert('Data berhasil ditambahkan!'); document.location='index.php';</script>";
-} else {
-    echo "<script>alert('Data gagal ditambahkan!'); document.location='index.php';</script>";
-}
+#5. mengalihkan halaman
+// header("location:index.php");
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script>
+    document.location="index.php";
+</script>

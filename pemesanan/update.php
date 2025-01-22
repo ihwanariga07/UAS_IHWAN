@@ -53,15 +53,6 @@ if ($proses) {
 
 
 
-
-
-
-
-
-
-
-
-
 <form action="proses.php" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Tanggal Checkin</label>
