@@ -34,11 +34,26 @@
                 
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Nama Tamu</label>
-                    <input type="text" name="id_nama" class="form-control" id="exampleInputPassword1">
+                    <select name="dos" class="form-control" id="">
+                        <option value="">-Pilih Nama Tamu</option>
+                        <?php
+                            include('../koneksi.php');
+                            $sql_tam = "SELECT * FROM tamu";
+                            $qry_tam = mysqli_query($koneksi,$sql_tam);
+                            foreach($qry_tam as $data_tam){
+                                ?>
+                                <option value="<?=$data_tam['id_tamu']?>"><?=$data_tam['nama_tamu']?></option>
+                                <?php
+                            }
+                        ?>
+                    </select>
+
+
                 </div>
+
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Bukti Pembayaran</label>
-                    <input type="image" name="bukti_pembayaran" class="form-control" id="exampleInputPassword1">
+                    <input type="file" accept="image/*" name="foto" class="form-control" id="exampleInputPassword1">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
