@@ -27,7 +27,10 @@
                     <label for="exampleInputPassword1" class="form-label">feedback</label>
                     <input type="text"  class="form-control" id="exampleInputPassword1">
                 </div>
-            </div>
+                <div class="d-grid">
+                        <button type="button" class="btn btn-primary">Kirim</button>
+                    </div>
+             </div>
             </div>
         </div>
     </div>
