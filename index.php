@@ -13,6 +13,7 @@
 ?>
 
 
+
 <div class="container">
     <div class="row mt-5">
         <div class="col-6 m-auto">
@@ -36,7 +37,7 @@
     </div>
 </div>
 
-</script>
+
 
 
     <script src="js/bootstrap.js"></script>
