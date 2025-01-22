@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-info-subtle">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="/UAS_IHWAN/logo/internet.png" alt="Brand Logo" type="image" width="50" height="50">
+      <img src="/UAS_IHWAN/logo/hotel.png" alt="Brand Logo" type="image" width="50" height="50">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
