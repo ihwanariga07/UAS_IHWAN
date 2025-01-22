@@ -141,11 +141,8 @@
         <!-- Gambar Profil -->
         <img src="/UAS_IHWAN/logo/hotel.png" alt="default">
         
-        <!-- Judul -->
-        <h1>Selamat Datang</h1>
-        
-        <!-- Deskripsi -->
-        <p>Di hotel renggali gayo highlind aceh tengah</p>
+        <h1>SELAMAT DATANG</h1>
+        <p>Di hotel renggali gayo highlind takengon.</p>
         
   
         <!-- Tombol Login dan Register -->

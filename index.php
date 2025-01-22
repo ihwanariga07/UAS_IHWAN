@@ -38,6 +38,9 @@
 
 </script>
 
+<a 
+        class="btn btn-danger nav-link text-black" 
+        href="/UAS_IHWAN/frontpage.php" ></a>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
