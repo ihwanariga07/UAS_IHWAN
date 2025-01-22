@@ -12,7 +12,7 @@
           <a class="nav-link menu active" aria-current="page" href="">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu active" aria-current="page" href="">Data Pemesanan</a>
+          <a class="nav-link menu active" aria-current="page" href="/UAS_IHWAN/pemesanan/index.php">Data Pemesanan</a>
         </li>
         <li class="nav-item">
           <a class="nav-link menu active" aria-current="page" href="">Data Tamu</a>
