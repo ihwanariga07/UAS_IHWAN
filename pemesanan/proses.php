@@ -1,12 +1,11 @@
-<?php
-include("../koneksi.php");
+<?php include("../koneksi.php");
 
 $tanggal_checkin = $_POST['tanggal_checkin'];
 $tanggal_checkout = $_POST['tanggal_checkout'];
 $id_tamu = $_POST['id_tamu'];
-$bukti_pembayaran = $_POST ['bukti_pembayaran'];
-// Proses unggah bukti pembayaran
 $bukti_pembayaran = "";
+
+// Proses unggah bukti pembayaran
 if (isset($_FILES['foto']) && $_FILES['foto']['name'] != "") {
     $bukti_pembayaran = $_FILES['foto']['name'];
     $target = "../uploads/" . basename($bukti_pembayaran);

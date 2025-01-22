@@ -48,3 +48,51 @@ if ($proses) {
     echo "<script>alert('Data gagal diperbarui!'); document.location='index.php';</script>";
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form action="proses.php" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Tanggal Checkin</label>
+        <input type="date" name="tanggal_checkin" class="form-control" value="<?=$data['tanggal_checkin']?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Tanggal Checkout</label>
+        <input type="date" name="tanggal_checkout" class="form-control" value="<?=$data['tanggal_checkout']?>" id="exampleInputPassword1">
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Nama Tamu</label>
+        <select name="id_tamu" class="form-control">
+            <?php
+                include('../koneksi.php');
+                $sql_tamu = "SELECT * FROM tamu";
+                $qry_tamu = mysqli_query($koneksi,$sql_tamu);
+                while ($data_tamu = mysqli_fetch_assoc($qry_tamu)) {
+                    ?>
+                    <option value="<?=$data_tamu['id_tamu']?>" <?=$data_tamu['id_tamu'] == $data['id_tamu'] ? 'selected' : ''?>><?=$data_tamu['nama_tamu']?></option>
+                    <?php
+                }
+            ?>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Bukti Pembayaran</label>
+        <input type="file" accept="image/*" name="bukti_pembayaran" class="form-control">
+        <img src="../uploads/<?=$data['bukti_pembayaran']?>" width="100" alt="bukti pembayaran">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

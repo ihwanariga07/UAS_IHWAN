@@ -34,7 +34,7 @@
                                 <th scope="col">Tanggal Checkout</th>
                                 <th scope="col">Tamu</th>
                                 <th scope="col">Bukti Pembayaran</th>
-                                <th scope="col">Aksi</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
