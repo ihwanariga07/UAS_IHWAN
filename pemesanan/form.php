@@ -53,6 +53,17 @@
 </div>
 
 
+<script>
+    function confirmLogout(event) {
+        event.preventDefault();
+        const userConfirmed = confirm("Anda yakin ingin keluar?");
+        if (userConfirmed) {
+        window.location.href = event.target.href;
+        }
+    }
+    </script>
+
+
 
 </body>
 </html>
