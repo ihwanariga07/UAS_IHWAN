@@ -34,7 +34,7 @@
                 
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Nama Tamu</label>
-                    <select name="dos" class="form-control" id="">
+                    <select name="tam" class="form-control" id="">
                         <option value="">-Pilih Nama Tamu</option>
                         <?php
                             include('../koneksi.php');

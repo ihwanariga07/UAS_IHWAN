@@ -1,24 +1,32 @@
 <?php
-#1. koneksikan file ini
 include("../koneksi.php");
 
-#2. mengambil value dari form
 $tanggal_checkin = $_POST['tanggal_checkin'];
 $tanggal_checkout = $_POST['tanggal_checkout'];
-$id_nama = $_POST['id_nama'];
-$bukti_pembayaran = $_POST['bukti_pembayaran'];
+$id_tamu = $_POST['id_tamu'];
+$bukti_pembayaran = $_POST ['bukti_pembayaran'];
+// Proses unggah bukti pembayaran
+$bukti_pembayaran = "";
+if (isset($_FILES['foto']) && $_FILES['foto']['name'] != "") {
+    $bukti_pembayaran = $_FILES['foto']['name'];
+    $target = "../uploads/" . basename($bukti_pembayaran);
 
+    if (!move_uploaded_file($_FILES['foto']['tmp_name'], $target)) {
+        die("Gagal mengunggah bukti pembayaran.");
+    }
+}
 
-#3. menulis query
-$simpan = "INSERT INTO pemesanan (tanggal_checkin,tanggal_checkout,id_tamu,bukti_pembayaran) VALUES ('$tanggal_checkin','$tanggal_checkout',
-'$id_nama','$bukti_pembayaran')";
+// Query simpan ke database
+$simpan = "INSERT INTO pemesanan (tanggal_checkin, tanggal_checkout, id_tamu, bukti_pembayaran) 
+           VALUES ('$tanggal_checkin', '$tanggal_checkout', '$id_tamu', '$bukti_pembayaran')";
 
-#4. jalankan query
+// Jalankan query
 $proses = mysqli_query($koneksi, $simpan);
 
-#5. mengalihkan halaman
-// header("location:index.php");
+// Redirect ke index
+if ($proses) {
+    echo "<script>alert('Data berhasil ditambahkan!'); document.location='index.php';</script>";
+} else {
+    echo "<script>alert('Data gagal ditambahkan!'); document.location='index.php';</script>";
+}
 ?>
-<script>
-    document.location="index.php";
-</script>
