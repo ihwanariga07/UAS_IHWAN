@@ -32,3 +32,61 @@
     </div>
   </div>
 </nav>
+
+
+<!-- CSS -->
+<style>
+  
+  .menu {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .menu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background 0.3s ease;
+    bottom: 0;
+    left: 0;
+  }
+
+  .menu:hover::before {
+    transform: scaleX(1);
+    background: #007bff; 
+  }
+
+  .menu:hover {
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+
+ 
+  .btn-danger {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .btn-danger:hover {
+    color: #d9534f;
+    text-decoration: none; 
+    transition: color 0.3s ease;
+  }
+
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  ul li {
+    display: grid;
+    place-content: center;
+    margin: 0;
+  }
+</style>
