@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>Renggali</title>
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <h3>Sistem Informasi Pemesanan</h3>
             </div>
             <div class="card-body">
-                <h4>Selamat Datang Do Hotel Renggali Gayo HighLind</h4>
+                <h4>Selamat Datang Di Hotel Renggali Gayo HighLind</h4>
                 
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">feedback</label>
