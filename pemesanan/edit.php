@@ -37,7 +37,7 @@
                 
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Nama Tamu</label>
-                    <input type="text" name="id_nama" value="<?=$data['id_nama']?>" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="id_tamu" value="<?=$data['id_tamu']?>" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Bukti Pembayaran</label>

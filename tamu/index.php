@@ -36,7 +36,7 @@
                     include("../koneksi.php");
 
                     #2. menulis query
-                    $tampil = "SELECT * FROM pemesanan";
+                    $tampil = "SELECT * FROM tamu";
 
                     #3. jalankan query
                     $proses = mysqli_query($koneksi, $tampil);

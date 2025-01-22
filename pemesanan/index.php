@@ -30,6 +30,9 @@
                         <th scope="col">Tanggal Checkout</th>
                         <th scope="col">Tamu</th>
                         <th scope="col">Bukti Pembayaran</th>
+
+                     
+
                         
                     </tr>
                 </thead>
@@ -56,6 +59,8 @@
                         <td><?=$data['bukti_pembayaran']?></td>
                         
                         <td>
+
+                        
                             <a class="btn btn-info btn-sm" href="edit.php?id_pemesanan=<?=$data['id_pemesanan']?>"><i class="fa fa-pen-to-square"></i></a>
                             
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapus<?=$data['id_pemesanan']?>">

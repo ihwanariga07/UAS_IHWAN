@@ -3,7 +3,7 @@
 include("../koneksi.php");
 
 #2. ambil id yang akan disunting
-$id = $_GET['id_tamu'];
+$id_tamu = $_GET['id_tamu'];
 
 #3. mengambil semua record data berdasarkan id yang dipilih
 $ambil = "SELECT * FROM tamu WHERE id_tamu='$id_tamu'";
