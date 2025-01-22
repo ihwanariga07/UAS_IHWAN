@@ -15,7 +15,7 @@
           <a class="nav-link menu active" aria-current="page" href="/UAS_IHWAN/pemesanan/index.php">Data Pemesanan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu active" aria-current="page" href="">Data Tamu</a>
+          <a class="nav-link menu active" aria-current="page" href="/UAS_IHWAN/tamu/index.php">Data Tamu</a>
         </li>
         
       </ul>
