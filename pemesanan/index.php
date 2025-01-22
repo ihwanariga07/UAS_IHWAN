@@ -91,7 +91,21 @@
     </div>
 </div>
 
-
+     
+    <script>
+    function confirmLogout(event) {
+        // Cegah aksi default dari link
+        event.preventDefault();
+        
+        // Tampilkan dialog konfirmasi
+        const userConfirmed = confirm("Anda yakin ingin keluar?");
+        
+        // Jika pengguna mengonfirmasi, arahkan ke halaman logout
+        if (userConfirmed) {
+        window.location.href = event.target.href;
+        }
+    }
+    </script>                              
 
 
 
