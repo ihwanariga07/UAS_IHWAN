@@ -13,6 +13,25 @@
 ?>
 
 
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-6 m-auto">
+            <div class="card">
+            <div class="card-header text-center">
+                <h3>Sistem Informasi Pemesanan</h3>
+            </div>
+            <div class="card-body">
+                <h4>Selamat Datang Do Hotel Renggali Gayo HighLind</h4>
+                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">feedback</label>
+                    <input type="text"  class="form-control" id="exampleInputPassword1">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </script>
 
