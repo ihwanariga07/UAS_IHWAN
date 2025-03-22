@@ -100,7 +100,7 @@
             <button type="submit" class="btn btn-primary">Tambah Akun</button>
         </form>
     </div>
-</div>
-<script src="../js/bootstrap.js"></script>
+  </div>
+ <script src="../js/bootstrap.js"></script>
 </body>
 </html>
